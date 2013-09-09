@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".NewTreatment" >
+
+<!--     <TextView -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:gravity="center" -->
+<!--         android:layout_above="@+id/edit_text_name" -->
+<!--         android:text="@string/new_treatment" /> -->
+    
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"        
+        android:text="@string/new_treatment" />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" 
+        android:layout_below="@+id/label_name"
+        android:inputType="text" />
+    
+    <TextView
+        android:id="@+id/label_max_dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edit_text_name"
+        android:text="@string/max_dose" />
+    
+    <LinearLayout
+        android:id="@+id/layout_max_dose" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/label_max_dose">       
+    
+	    <EditText
+	        android:id="@+id/edit_text_amount"
+	        android:layout_width="65dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/default_amount"
+	        android:inputType="numberDecimal" />	    
+	    
+	     <Spinner
+	        android:id="@+id/spinner_units"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	     
+	     <Spinner
+            android:id="@+id/spinner_intervals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+	
+       
+<!-- 	     <EditText -->
+<!--             android:id="@+id/edit_text_time_period" -->
+<!--             android:layout_width="60dp" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:text="@string/default_time_period" -->
+<!--             android:inputType="number" /> -->
+	     
+<!--          <Spinner -->
+<!-- 	        android:id="@+id/spinner_time_units" -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:layout_height="wrap_content" /> -->
+
+
+     
+     </LinearLayout>
+
+        <Button
+            android:id="@+id/button_schedule_treatment" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/layout_max_dose"
+	        android:onClick="scheduleTreatment"
+	        android:text="Schedule treatment"/>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_max_dose"
+            android:layout_toRightOf="@+id/button_schedule_treatment"
+            android:text="Save"/>
+
+
+</RelativeLayout>

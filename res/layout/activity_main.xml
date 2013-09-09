@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    >
+    
+        
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textSize="22sp"             
+        android:text="MedicinePlanner" />   
+                    
+    <LinearLayout 
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"       
+        android:gravity="center">
+
+        <Button
+             android:id="@+id/buttonNewTreatment"
+             android:layout_width="250dp"
+             android:layout_height="40dp"
+             android:text="@string/new_treatment"         
+             android:onClick="newTreatment"
+             
+             />
+        
+        
+        <Button
+            
+             android:id="@+id/buttonTranslateFrom"
+             android:layout_width="250dp"
+             android:layout_height="40dp"
+             android:text="MedicinePlanner"
+             android:onClick="translateFrom"/>
+        <!--            android:visibility="invisible" -->
+        
+        <Button
+             android:id="@+id/buttonAbout"
+             android:layout_width="250dp"
+             android:layout_height="40dp"
+             android:text="MedicinePlanner"
+             android:onClick="about"/>
+        <!--            android:visibility="invisible" -->
+        
+        <Button
+             android:id="@+id/buttonQuit"
+             android:layout_width="250dp"
+             android:layout_height="40dp"
+             android:text="MedicinePlanner"
+             android:onClick="quit"/>
+        <!--            android:visibility="invisible" -->
+    </LinearLayout>
+    
+</LinearLayout>
